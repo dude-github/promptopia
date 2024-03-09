@@ -2,6 +2,7 @@ import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 import "@styles/globals.css";
 import { Suspense } from "react";
+import Loading from "./profile/loading";
 
 export const metadata = {
   title: "Promptopia",
@@ -12,7 +13,7 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <Suspense>
+        <Suspense fallback={<Loading />}>
           <Provider>
             <div className="main">
               <div className="gradient" />
