@@ -72,7 +72,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; // Removed useSearchParams import
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 import Form from "@components/Form";
 
@@ -82,15 +82,15 @@ const UpdatePrompt = () => {
   const [post, setPost] = useState({ prompt: "", tag: "" });
   const [submitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    // Inside a suspense boundary to handle loading state
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        const searchParams = new URLSearchParams(window.location.search); const
-        id = searchParams.get("id"); if (id) setPromptId(id);
-      </Suspense>
-    );
-  }, []);
+  // useEffect(() => {
+  //   // Inside a suspense boundary to handle loading state
+  //   return (
+  //     <Suspense fallback={<div>Loading...</div>}>
+  //       const searchParams = new URLSearchParams(window.location.search); const
+  //       id = searchParams.get("id"); if (id) setPromptId(id);
+  //     </Suspense>
+  //   );
+  // }, []);
 
   useEffect(() => {
     const getPromptDetails = async () => {
